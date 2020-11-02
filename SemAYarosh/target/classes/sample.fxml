@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.chart.StackedBarChart?>
 <?import javafx.scene.control.Button?>
@@ -24,7 +25,7 @@
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font></Button>
-      <StackedBarChart fx:id="barChart" animated="false" layoutX="14.0" layoutY="14.0" prefHeight="760.0" prefWidth="700.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="370.0" AnchorPane.topAnchor="14.0">
+      <StackedBarChart fx:id="barChart" animated="false" layoutX="14.0" layoutY="14.0" prefHeight="338.0" prefWidth="700.0" AnchorPane.bottomAnchor="434.6" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="370.0" AnchorPane.topAnchor="14.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
@@ -43,5 +44,13 @@
          </font>
       </Button>
       <Spinner fx:id="deviationSpinner" layoutX="805.0" layoutY="147.0" prefHeight="26.0" prefWidth="191.0" AnchorPane.rightAnchor="87.79999999999995" AnchorPane.topAnchor="147.0" />
+      <LineChart fx:id="lineChart" layoutX="14.0" layoutY="353.0" prefHeight="420.0" prefWidth="682.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="388.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
    </children>
 </AnchorPane>
