@@ -6,19 +6,19 @@ public class Result {
     private int unSuccessfullyTrials;
     private int successfullyTrials;
     private int counter = -1;
-    private List<Double> list;
+    private List<Double> listOfDeviations;
 
-    public Result(int unSuccessfullyTrials, int successfullyTrials, int counter, List<Double> list) {
+    public Result(int unSuccessfullyTrials, int successfullyTrials, int counter, List<Double> listOfDeviations) {
         this.unSuccessfullyTrials = unSuccessfullyTrials;
         this.successfullyTrials = successfullyTrials;
         this.counter = counter;
-        this.list = list;
+        this.listOfDeviations = listOfDeviations;
     }
 
-    public Result(int unSuccessfullyTrials, int successfullyTrials, List<Double> list) {
+    public Result(int unSuccessfullyTrials, int successfullyTrials, List<Double> listOfDeviations) {
         this.unSuccessfullyTrials = unSuccessfullyTrials;
         this.successfullyTrials = successfullyTrials;
-        this.list = list;
+        this.listOfDeviations = listOfDeviations;
     }
 
     public Result(int unSuccessfullyTrials, int successfullyTrials, int counter) {
@@ -30,6 +30,14 @@ public class Result {
     public Result(int unSuccessfullyTrials, int successfullyTrials) {
         this.unSuccessfullyTrials = unSuccessfullyTrials;
         this.successfullyTrials = successfullyTrials;
+    }
+
+    public List<Double> getListOfDeviations() {
+        return listOfDeviations;
+    }
+
+    public void setListOfDeviations(List<Double> listOfDeviations) {
+        this.listOfDeviations = listOfDeviations;
     }
 
     public int getUnSuccessfullyTrials() {

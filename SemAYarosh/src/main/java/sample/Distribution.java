@@ -1,22 +1,28 @@
 package sample;
 
+import org.apache.commons.math3.random.RandomGenerator;
+
 import java.util.Random;
 
 public class Distribution {
 
-    private static final Random RANDOM = new Random();
+    private final Random random;
 
-    public static double uniformDistribution(double min, double max) {
-        return RANDOM.nextDouble() * max + min;
+    public Distribution(Random random) {
+        this.random = random;
     }
 
-    public static double normalDistribution(double mean, double variance) {
-        return variance + mean * RANDOM.nextGaussian();
+    public double uniformDistribution(double min, double max) {
+        return random.nextDouble() * max + min;
     }
 
-    public static double triangularDistribution(double a, double b, double c) {
+    public double normalDistribution(double mean, double variance) {
+        return variance + mean * random.nextGaussian();
+    }
+
+    public double triangularDistribution(double a, double b, double c) {
         double F = (c - a) / (b - a);
-        double rand = RANDOM.nextDouble();
+        double rand = random.nextDouble();
         if (rand < F) {
             return a + Math.sqrt(rand * (b - a) * (c - a));
         } else {
