@@ -6,23 +6,23 @@ import java.util.Random;
 
 public class Distribution {
 
-    private final Random random;
+    private final Random RANDOM;
 
     public Distribution(Random random) {
-        this.random = random;
+        this.RANDOM = random;
     }
 
     public double uniformDistribution(double min, double max) {
-        return random.nextDouble() * max + min;
+        return RANDOM.nextDouble() * (max - min) + min;
     }
 
     public double normalDistribution(double mean, double variance) {
-        return variance + mean * random.nextGaussian();
+        return mean + variance * RANDOM.nextGaussian();
     }
 
     public double triangularDistribution(double a, double b, double c) {
         double F = (c - a) / (b - a);
-        double rand = random.nextDouble();
+        double rand = RANDOM.nextDouble();
         if (rand < F) {
             return a + Math.sqrt(rand * (b - a) * (c - a));
         } else {

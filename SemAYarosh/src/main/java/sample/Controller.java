@@ -131,7 +131,7 @@ public class Controller implements Initializable {
     }
 
     private Result getListOfTrialsDeviation(double c) {
-        RandomGenerator randomGenerator = new JDKRandomGenerator(10);
+        RandomGenerator randomGenerator = new JDKRandomGenerator(123456789);
         NormalDistribution s1 = new NormalDistribution(randomGenerator, 7.0, 0.4);
         UniformRealDistribution s2 = new UniformRealDistribution(randomGenerator, 9.1, 9.9);
         TriangularDistribution s3 = new TriangularDistribution(randomGenerator, 7.6, 8.0, c);
@@ -171,7 +171,7 @@ public class Controller implements Initializable {
         int counter = 0;
         double deviation = deviationSpinner.getValue();
         List<Double> deviations = new ArrayList<>();
-        Random random = new Random(10);
+        Random random = new Random(123456789);
         Distribution distribution = new Distribution(random);
         while (true) {
             double s1 = distribution.normalDistribution(7.0, 0.4);
